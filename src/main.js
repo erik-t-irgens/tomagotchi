@@ -91,6 +91,7 @@ setInterval(function() {
     clearInterval(tamagotchi.funInterval);
     $("#gameBoard").slideUp(1000);
     $("#deathScreen").slideDown(2500);
+    $("#boredCard").slideDown();
     setTimeout(function(){
       document.location.reload()
     }, 5000);
@@ -98,11 +99,12 @@ setInterval(function() {
     clearInterval(tamagotchi.sleepInterval);
     $("#gameBoard").slideUp(1000);
     $("#deathScreen").slideDown(2500);
+    $("#sleeplessCard").slideDown();
     setTimeout(function(){
       document.location.reload()
     }, 10000);
   }
-}, 5);
+}, 500);
 
 
 

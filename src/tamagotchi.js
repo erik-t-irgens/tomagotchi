@@ -1,6 +1,6 @@
 // Backend logic with exports, functions, constructors, etc.
 export let tamagotchi = {
-  foodLevel: 3,
+  foodLevel: 10,
   setHunger: function() {
     const hungerInterval = setInterval(() => {
       this.foodLevel --;
@@ -26,13 +26,6 @@ export let tamagotchi = {
   setFun: function() {
     const funInterval = setInterval (() => {
       this.funLevel --;
-      if(this.didItBore() == true) {
-        clearInterval(funInterval);
-        alert("Your tamagotchi died of boredom!");
-        setTimeout(function(){
-          document.location.reload()
-        }, 5000);
-      }
     }, 1000);
   },
   didItBore: function() {
@@ -54,13 +47,6 @@ export let tamagotchi = {
   setWake: function() {
     const sleepInterval = setInterval (() => {
       this.sleepLevel --;
-      if(this.didItTire() == true) {
-        clearInterval(sleepInterval);
-        alert("Your tamagotchi had an anneurysm from not having enough sleep!");
-        setTimeout(function(){
-          document.location.reload()
-        }, 5000);
-      }
     }, 1000);
   },
   didItTire: function() {
